@@ -1,2 +1,68 @@
-# RegExDNA
-CLI Software to search regular expressions over dna 
+# Búsqueda de Expresiones Regulares en Biología Computacional
+
+Este proyecto se centra en el desarrollo de un sistema de búsqueda de expresiones regulares con un enfoque específico en el contexto de la biología computacional. A través de este README, proporcionaré una visión general de los conceptos fundamentales detrás de la búsqueda de expresiones regulares, así como una explicación concisa del código proporcionado.
+
+## Introducción a las Expresiones Regulares
+
+Las expresiones regulares son secuencias de caracteres que conforman un patrón de búsqueda. Permiten especificar patrones complejos y realizar búsquedas eficientes dentro de cadenas de texto. En este proyecto, utilizo expresiones regulares para buscar patrones específicos dentro de secuencias de nucleótidos, lo cual es crucial en el ámbito de la biología computacional.
+
+### Componentes Básicos
+
+- **Texto:** La cadena en la que se realiza la búsqueda.
+- **Patrón:** El conjunto de caracteres que estamos buscando.
+- **Ocurrencia:** Cada vez que el patrón se encuentra en el texto.
+
+### Ejemplo
+
+```
+Texto: "Pepe Pecas pica papas con un pico, con un pico pica papas Pepe Pecas."
+Patrón: "pic"
+Ocurrencias: 8
+```
+
+## Conceptos Clave
+
+### Expresiones Regulares y Operadores
+
+Las expresiones regulares pueden contener operadores que permiten definir patrones más complejos:
+
+- **Unión (`|`):** Representa la opción de uno u otro patrón.
+- **Concatenación (`.`):** Une dos patrones para formar uno más grande.
+- **Clausura de Kleene (`*`):** Indica que el patrón anterior puede repetirse cero o más veces.
+
+## Teoría de Autómatas y Conversión de Autómatas
+
+En este proyecto, utilizamos la teoría de autómatas para implementar la búsqueda de expresiones regulares. Comenzamos con autómatas no deterministas (AFN) y los convertimos en autómatas finitos deterministas (AFD) para optimizar el proceso de búsqueda. La conversión de un AFN a un AFD implica los siguientes pasos:
+
+1. **Construcción del Conjunto de Estados:** Se genera un conjunto de estados que representan todas las posibles combinaciones de estados del AFN.
+
+2. **Cálculo de Transiciones:** Se calculan las transiciones para cada estado del AFD basándose en las transiciones del AFN.
+
+3. **Minimización del AFD:** Se minimiza el AFD resultante para reducir el número de estados y mejorar la eficiencia del algoritmo.
+
+La conversión de autómatas es un proceso fundamental en la implementación de la búsqueda de expresiones regulares, ya que permite optimizar el rendimiento y la precisión del sistema.
+
+## Contexto Biológico
+
+En el ámbito de la biología computacional, las expresiones regulares son fundamentales para analizar secuencias de nucleótidos y proteínas. Aquí hay algunos conceptos clave relacionados con este contexto:
+
+- **Genoma:** El conjunto completo de material genético de un organismo, que incluye tanto los genes codificantes como el ADN no codificante.
+- **Nucleótidos:** Los bloques de construcción básicos del ADN, representados por las bases nitrogenadas Adenina (A), Timina (T), Guanina (G) y Citosina (C).
+- **Expansión de Codones:** El proceso mediante el cual secuencias de codones específicas se expanden utilizando expresiones regulares para analizar variaciones y mutaciones.
+
+## Interfaz de Línea de Comandos (CLI)
+
+El programa se ejecuta a través de una interfaz de línea de comandos (CLI), lo que permite una interacción sencilla con el usuario. Al ejecutar el programa, se solicitará al usuario que ingrese una expresión regular y una secuencia de texto sobre la cual realizar la búsqueda. El resultado de la búsqueda se mostrará en la consola.
+
+## Uso del Código
+
+El código proporcionado implementa un sistema de búsqueda de expresiones regulares utilizando la teoría de autómatas. Se ha diseñado para analizar secuencias de nucleótidos y encontrar ocurrencias de patrones específicos dentro de ellas. Para utilizar el código, sigue estos pasos:
+
+1. Ejecuta el programa proporcionado en un entorno de desarrollo Java.
+2. Proporciona una expresión regular como entrada.
+3. Ingresa la secuencia de texto sobre la cual deseas realizar la búsqueda.
+4. El programa imprimirá las ocurrencias encontradas y resaltará los patrones coincidentes en la secuencia de texto.
+
+¡Explora y experimenta con el código para comprender mejor cómo se implementa la búsqueda de expresiones regulares en el contexto de la biología computacional!
+
+---
