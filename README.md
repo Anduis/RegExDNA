@@ -1,10 +1,26 @@
 # Búsqueda de Expresiones Regulares en Biología Computacional
 
-Este proyecto se centra en el desarrollo de un sistema de búsqueda de expresiones regulares con un enfoque específico en el contexto de la biología computacional. A través de este README, proporcionaré una visión general de los conceptos fundamentales detrás de la búsqueda de expresiones regulares, así como una explicación concisa del código proporcionado.
+Este proyecto se centra en el desarrollo de un sistema de búsqueda de expresiones regulares con un enfoque específico en el contexto de la biología computacional. A través de este README, proporcionaré una visión general de los conceptos fundamentales detrás de la búsqueda de expresiones regulares.
+
+## Contexto Biológico
+
+En el ámbito de la biología computacional, las expresiones regulares son fundamentales para analizar secuencias de nucleótidos y proteínas. Aquí hay algunos conceptos clave relacionados con este contexto:
+
+- **Genoma:** El conjunto completo de material genético de un organismo, que incluye tanto los genes codificantes como el ADN no codificante.
+- **Nucleótidos:** Los bloques de construcción básicos del ADN, representados por las bases nitrogenadas Adenina (A), Timina (T), Guanina (G) y Citosina (C).
+- **Expansión de Codones:** El proceso mediante el cual secuencias de codones específicas se expanden utilizando expresiones regulares para analizar variaciones y mutaciones.
+
+Nótese (que no debería ser sorpresa para nadie) el genoma es inmenso, lo que dificulta esta tarea.
+
+![gen](./readmeImages/gen.gif)
 
 ## Introducción a las Expresiones Regulares
 
-Las expresiones regulares son secuencias de caracteres que conforman un patrón de búsqueda. Permiten especificar patrones complejos y realizar búsquedas eficientes dentro de cadenas de texto. En este proyecto, utilizo expresiones regulares para buscar patrones específicos dentro de secuencias de nucleótidos, lo cual es crucial en el ámbito de la biología computacional.
+Las expresiones regulares son secuencias de caracteres que conforman un patrón de búsqueda. Permiten especificar patrones complejos y realizar búsquedas eficientes dentro de cadenas de texto.
+
+> Las expresiones regulares son patrones utilizados para encontrar una determinada combinación de caracteres dentro de una cadena de texto. Las expresiones regulares proporcionan una manera muy flexible de buscar o reconocer cadenas de texto. Por ejemplo, el grupo formado por las cadenas Handel, Händel y Haendel se describe con el patrón H(a|ä|ae)ndel.
+>
+> \- Wikipedia
 
 ### Componentes Básicos
 
@@ -20,9 +36,7 @@ Patrón: "pic"
 Ocurrencias: 8
 ```
 
-## Conceptos Clave
-
-### Expresiones Regulares y Operadores
+## Operadores de las Expresiones Regulares
 
 Las expresiones regulares pueden contener operadores que permiten definir patrones más complejos:
 
@@ -52,18 +66,6 @@ En este proyecto, se utiliza la teoría de autómatas para implementar la búsqu
 
 La conversión de autómatas es un proceso fundamental en la implementación de la búsqueda de expresiones regulares, ya que permite optimizar el rendimiento y la precisión del sistema.
 
-## Contexto Biológico
-
-En el ámbito de la biología computacional, las expresiones regulares son fundamentales para analizar secuencias de nucleótidos y proteínas. Aquí hay algunos conceptos clave relacionados con este contexto:
-
-- **Genoma:** El conjunto completo de material genético de un organismo, que incluye tanto los genes codificantes como el ADN no codificante.
-- **Nucleótidos:** Los bloques de construcción básicos del ADN, representados por las bases nitrogenadas Adenina (A), Timina (T), Guanina (G) y Citosina (C).
-- **Expansión de Codones:** El proceso mediante el cual secuencias de codones específicas se expanden utilizando expresiones regulares para analizar variaciones y mutaciones.
-
-Nótese (que no debería ser sorpresa para nadie) el genoma es inmenso, lo que dificulta esta tarea.
-
-![gen](./readmeImages/gen.gif)
-
 ## Interfaz de Línea de Comandos (CLI)
 
 ![ejecucion](./readmeImages/run.gif)
@@ -78,9 +80,8 @@ El código proporcionado implementa un sistema de búsqueda de expresiones regul
 
 1. Ejecuta el Main.
 2. Proporciona una expresión regular como entrada.
+   (los archivos in.txt incluyen ejemplos de entradas)
 3. Ingresa la secuencia de texto sobre la cual deseas realizar la búsqueda.
 4. El programa imprimirá las ocurrencias encontradas y resaltará los patrones coincidentes en la secuencia de texto.
-
-¡Explora y experimenta con el código para comprender mejor cómo se implementa la búsqueda de expresiones regulares en el contexto de la biología computacional!
 
 ---
