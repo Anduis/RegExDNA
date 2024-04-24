@@ -9,7 +9,7 @@ Las expresiones regulares son secuencias de caracteres que conforman un patrón 
 ### Componentes Básicos
 
 - **Texto:** La cadena en la que se realiza la búsqueda.
-- **Patrón:** El conjunto de caracteres que estamos buscando.
+- **Patrón:** El conjunto de caracteres que se está buscando.
 - **Ocurrencia:** Cada vez que el patrón se encuentra en el texto.
 
 ### Ejemplo
@@ -30,9 +30,19 @@ Las expresiones regulares pueden contener operadores que permiten definir patron
 - **Concatenación (`.`):** Une dos patrones para formar uno más grande.
 - **Clausura de Kleene (`*`):** Indica que el patrón anterior puede repetirse cero o más veces.
 
+### Ejemplo
+
+```
+Patrones:
+("pic" o "pec") o ("pep" o "pap")
+
+Expresión Regular:
+p.(((i|e).c)|((e|a).p))
+```
+
 ## Teoría de Autómatas y Conversión de Autómatas
 
-En este proyecto, utilizamos la teoría de autómatas para implementar la búsqueda de expresiones regulares. Comenzamos con autómatas no deterministas (AFN) y los convertimos en autómatas finitos deterministas (AFD) para optimizar el proceso de búsqueda. La conversión de un AFN a un AFD implica los siguientes pasos:
+En este proyecto, se utiliza la teoría de autómatas para implementar la búsqueda de expresiones regulares. Se comienza con autómatas no deterministas (AFN) y los se les convierte en autómatas finitos deterministas (AFD) para optimizar el proceso de búsqueda. La conversión de un AFN a un AFD implica los siguientes pasos:
 
 1. **Construcción del Conjunto de Estados:** Se genera un conjunto de estados que representan todas las posibles combinaciones de estados del AFN.
 
@@ -50,15 +60,23 @@ En el ámbito de la biología computacional, las expresiones regulares son funda
 - **Nucleótidos:** Los bloques de construcción básicos del ADN, representados por las bases nitrogenadas Adenina (A), Timina (T), Guanina (G) y Citosina (C).
 - **Expansión de Codones:** El proceso mediante el cual secuencias de codones específicas se expanden utilizando expresiones regulares para analizar variaciones y mutaciones.
 
+Nótese (que no debería ser sorpresa para nadie) el genoma es inmenso, lo que dificulta esta tarea.
+
+![gen](./readmeImages/gen.gif)
+
 ## Interfaz de Línea de Comandos (CLI)
 
+![ejecucion](./readmeImages/run.gif)
+
 El programa se ejecuta a través de una interfaz de línea de comandos (CLI), lo que permite una interacción sencilla con el usuario. Al ejecutar el programa, se solicitará al usuario que ingrese una expresión regular y una secuencia de texto sobre la cual realizar la búsqueda. El resultado de la búsqueda se mostrará en la consola.
+
+![resultado](./readmeImages/coincidencias.png)
 
 ## Uso del Código
 
 El código proporcionado implementa un sistema de búsqueda de expresiones regulares utilizando la teoría de autómatas. Se ha diseñado para analizar secuencias de nucleótidos y encontrar ocurrencias de patrones específicos dentro de ellas. Para utilizar el código, sigue estos pasos:
 
-1. Ejecuta el programa proporcionado en un entorno de desarrollo Java.
+1. Ejecuta el Main.
 2. Proporciona una expresión regular como entrada.
 3. Ingresa la secuencia de texto sobre la cual deseas realizar la búsqueda.
 4. El programa imprimirá las ocurrencias encontradas y resaltará los patrones coincidentes en la secuencia de texto.
