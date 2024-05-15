@@ -1,3 +1,6 @@
+[![es](https://img.shields.io/badge/lang-es-yellow.svg)](./README.md)
+[![en](https://img.shields.io/badge/lang-en-red.svg)](./README.en.md)
+
 # Búsqueda de Expresiones Regulares en Biología Computacional
 
 Este proyecto se centra en el desarrollo de un sistema de búsqueda de expresiones regulares con un enfoque específico en el contexto de la biología computacional. A través de este README, proporcionaré una visión general de los conceptos fundamentales detrás de la búsqueda de expresiones regulares.
